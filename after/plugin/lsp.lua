@@ -63,10 +63,22 @@ cmp.setup.cmdline(':', {
     })
 })
 
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = '▎'
+    }
+})
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
 local handlers = {
-    function(server_name)     -- default handler (optional)
+    function(server_name) -- default handler
         require("lspconfig")[server_name].setup {
             capabilities = capabilities,
         }
