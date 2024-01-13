@@ -53,6 +53,6 @@ return require('packer').startup(function(use)
         'saadparwaiz1/cmp_luasnip',
     }
 
-    use('mhartington/formatter.nvim')
+    use("stevearc/conform.nvim")
     use("github/copilot.vim")
 end)
