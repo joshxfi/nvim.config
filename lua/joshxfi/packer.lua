@@ -15,31 +15,32 @@ return require('packer').startup(function(use)
         run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
-        end,
+        end
     }
 
-    use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('tpope/vim-surround')
 
     use('nvim-tree/nvim-web-devicons')
 
-    use({
-        "folke/trouble.nvim",
-        config = function()
-            require("trouble").setup {}
-        end
-    })
-
-    use('nvim-tree/nvim-tree.lua')
-    use('lewis6991/gitsigns.nvim')
-    use('romgrk/barbar.nvim')
-    use('nvim-lualine/lualine.nvim')
-
     use {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',
+    }
+
+    use('nvim-tree/nvim-tree.lua')
+    use('lewis6991/gitsigns.nvim')
+    use('romgrk/barbar.nvim')
+
+    use {
+        'folke/trouble.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     use {
