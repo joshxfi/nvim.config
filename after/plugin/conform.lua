@@ -1,8 +1,15 @@
 require("conform").setup({
+    formatters = {
+        prismafmt = {
+            command = "~/builds/prisma-engines/target/release/prisma-fmt",
+        },
+    },
+
     formatters_by_ft = {
         lua = { "stylua" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
+        prisma = { "prismafmt" },
     },
 })
 
