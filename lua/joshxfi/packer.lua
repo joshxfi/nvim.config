@@ -30,8 +30,12 @@ return require('packer').startup(function(use)
     }
 
     use('nvim-tree/nvim-tree.lua')
-    use('lewis6991/gitsigns.nvim')
     use('romgrk/barbar.nvim')
+
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function() require("gitsigns").setup {} end
+    }
 
     use {
         'folke/trouble.nvim',
@@ -44,8 +48,8 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
+        'windwp/nvim-autopairs',
+        config = function() require('nvim-autopairs').setup {} end
     }
 
     use {
@@ -58,6 +62,6 @@ return require('packer').startup(function(use)
         'saadparwaiz1/cmp_luasnip',
     }
 
-    use("stevearc/conform.nvim")
-    use("github/copilot.vim")
+    use('stevearc/conform.nvim')
+    use('github/copilot.vim')
 end)
