@@ -18,4 +18,4 @@ vim.api.nvim_create_user_command("Format", function(args)
     require("conform").format({ async = true, lsp_fallback = true, range = range })
 end, { range = true })
 
-vim.keymap.set('n', '<leader>f', vim.cmd.Format, { silent = true, noremap = true })
+vim.keymap.set('n', '<leader>p', vim.cmd.Format, { silent = true, noremap = true })
