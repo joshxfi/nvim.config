@@ -7,6 +7,10 @@ require("conform").setup({
 
     formatters_by_ft = {
         lua = { "stylua" },
+        css = { "prettier" },
+        html = { "prettier" },
+        json = { "prettier" },
+        jsonc = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
         prisma = { "prismafmt" },
