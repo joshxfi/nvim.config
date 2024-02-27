@@ -9,6 +9,7 @@ require("conform").setup({
         lua = { "stylua" },
         css = { "prettier" },
         html = { "prettier" },
+        yaml = { "prettier" },
         json = { "prettier" },
         jsonc = { "prettier" },
         typescript = { "prettier" },
