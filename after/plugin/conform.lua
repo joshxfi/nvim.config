@@ -12,6 +12,7 @@ require("conform").setup({
         yaml = { "prettier" },
         json = { "prettier" },
         jsonc = { "prettier" },
+        javascript = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
         prisma = { "prismafmt" },
