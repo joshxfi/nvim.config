@@ -66,6 +66,22 @@ return require('packer').startup(function(use)
         requires = { 'rafamadriz/friendly-snippets' }
     }
 
+
     use('stevearc/conform.nvim')
-    use('github/copilot.vim')
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+    use {
+        'github/copilot.vim',
+        config = function()
+            vim.keymap.set('i', '<right>', 'copilot#Accept("\\<CR>")', {
+                silent = true,
+                expr = true,
+                replace_keycodes = false
+            })
+        end
+    }
 end)
