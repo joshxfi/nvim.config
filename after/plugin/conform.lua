@@ -17,6 +17,8 @@ require("conform").setup({
         typescriptreact = { "prettier" },
         javascriptreact = { "prettier" },
         prisma = { "prismafmt" },
+        md = { "mdformat" },
+        mdx = { "mdformat" },
     },
 })
 
