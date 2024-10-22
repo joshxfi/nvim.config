@@ -19,15 +19,16 @@ return require('packer').startup(function(use)
     }
 
     use('tpope/vim-fugitive')
+
     use({
-    "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-    config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
-})
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    })
 
     use('nvim-tree/nvim-web-devicons')
 
@@ -49,6 +50,8 @@ return require('packer').startup(function(use)
         'folke/trouble.nvim',
         requires = { 'nvim-tree/nvim-web-devicons' }
     }
+
+    use 'AndreM222/copilot-lualine'
 
     use {
         'nvim-lualine/lualine.nvim',
@@ -82,14 +85,24 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+
     use {
-        'github/copilot.vim',
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
         config = function()
-            vim.keymap.set('i', '<right>', 'copilot#Accept("\\<CR>")', {
-                silent = true,
-                expr = true,
-                replace_keycodes = false
-            })
-        end
+            require("copilot").setup({})
+        end,
     }
+
+    -- use {
+    --     'github/copilot.vim',
+    --     config = function()
+    --         vim.keymap.set('i', '<right>', 'copilot#Accept("\\<CR>")', {
+    --             silent = true,
+    --             expr = true,
+    --             replace_keycodes = false
+    --         })
+    --     end
+    -- }
 end)
