@@ -140,6 +140,13 @@ require("mason").setup({
 })
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "vtsls" },
+	ensure_installed = {
+		"vtsls",
+		"eslint",
+		"tailwindcss",
+		"prismals",
+		"lua_ls",
+		"html",
+	},
 	handlers = handlers,
 })
