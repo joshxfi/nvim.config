@@ -147,6 +147,7 @@ require("mason-lspconfig").setup({
 		"prismals",
 		"lua_ls",
 		"html",
+		"cssls",
 	},
 	handlers = handlers,
 })

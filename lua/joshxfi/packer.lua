@@ -35,9 +35,15 @@ return require("packer").startup(function(use)
 
 	use({
 		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
+		tag = "v1.11.0",
 	})
+
+	use({
+		"williamboman/mason-lspconfig.nvim",
+		tag = "v1.32.0",
+	})
+
+	use("neovim/nvim-lspconfig")
 
 	use("nvim-tree/nvim-tree.lua")
 	use("romgrk/barbar.nvim")
