@@ -1,2 +1,1 @@
-require("joshxfi.remap")
-require("joshxfi.set")
+require("joshxfi.config.lazy")
