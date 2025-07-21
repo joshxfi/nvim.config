@@ -22,6 +22,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+-- vim.keymap.set("n", "[d", vim.diagnostic.jump({ count = 1, float = true }))
+-- vim.keymap.set("n", "]d", vim.diagnostic.jump({ count = -1, float = true }))
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
