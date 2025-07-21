@@ -5,9 +5,7 @@ return {
 			"lewis6991/gitsigns.nvim",
 			"nvim-tree/nvim-web-devicons",
 		},
-		init = function()
-			vim.g.barbar_auto_setup = false
-
+		config = function()
 			local map = vim.api.nvim_set_keymap
 			local opts = { noremap = true, silent = true }
 
