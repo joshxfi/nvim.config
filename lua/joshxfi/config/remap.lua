@@ -9,8 +9,9 @@ vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, opts)
 vim.keymap.set("i", "jj", "<Esc>", opts)
+vim.keymap.set("n", "L", "$", opts)
+vim.keymap.set("n", "H", "^", opts)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -24,4 +25,5 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 -- vim.keymap.set("n", "[d", vim.diagnostic.jump({ count = 1, float = true }))
 -- vim.keymap.set("n", "]d", vim.diagnostic.jump({ count = -1, float = true }))
+-- vim.keyap.set("n", "'<leader>ca", vim.lsp.buf.code_action())
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
