@@ -6,9 +6,7 @@ return {
 		opts = {},
 	},
 
-	{
-		"AndreM222/copilot-lualine",
-	},
+	{ "AndreM222/copilot-lualine" },
 
 	{
 		"windwp/nvim-autopairs",
@@ -21,7 +19,14 @@ return {
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
 		event = "InsertEnter",
-		opts = {},
+		opts = {
+			suggestion = { enabled = false },
+			panel = { enabled = false },
+			filetypes = {
+				markdown = true,
+				help = true,
+			},
+		},
 	},
 
 	{
