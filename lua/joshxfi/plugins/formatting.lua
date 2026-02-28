@@ -42,6 +42,7 @@ return {
 				javascriptreact = { "biome" },
 				prisma = { "prismafmt" },
 				markdown = { "prettier" },
+				python = { "ruff" },
 			},
 		},
 	},

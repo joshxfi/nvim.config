@@ -259,7 +259,10 @@ return {
 			vim.list_extend(ensure_installed, {
 				"biome",
 				"tailwindcss",
+				"python-lsp-server",
 				"ts_ls",
+				"prettier",
+				"ruff",
 				"stylua",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
