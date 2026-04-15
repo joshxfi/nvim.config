@@ -41,7 +41,7 @@ return {
 				typescriptreact = { "oxfmt" },
 				javascriptreact = { "oxfmt" },
 				prisma = { "prismafmt" },
-				markdown = { "oxfmt" },
+				md = { "oxfmt" },
 				python = { "ruff" },
 			},
 		},
